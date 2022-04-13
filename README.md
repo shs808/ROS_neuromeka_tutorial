@@ -443,6 +443,8 @@ indy6d_driver.cpp은 **ROS에서 연결된 로봇의 컨트롤 박스로 명령�
    아래의 코드는 카메라가 잘 인식이 되면 시리얼 넘버가 뜨게 해주는 코드입니다. 
 
    `rosrun pointgrey_camera_driver list_cameras`
+  
+   인식이 되지 않으면 ubuntu를 
 
 2. 터미널 창을 열어 아래의 명령어를 실행하면 카메라가 작동하며 영상 데이터를 취득합니다. ROS의 공용 Library인sensor_msgs/Image에 영상데이터들이 저장됩니다.
 
@@ -515,7 +517,7 @@ indy6d_driver.cpp은 **ROS에서 연결된 로봇의 컨트롤 박스로 명령�
 
 작성한 ROS 코드들이 맞는 순서에 따라 잘 움직이는 지, 좌표로 이동이 깔끔히 잘 계산되어 가는 지등을 Gazebo로 테스트 할 수 있습니다. 
 
-먼저  [indy10_moveit_gazebo.launch](./software/src/indy-ros/indy10_gazebo/launch/indy10_moveit_gazebo.launch) 에서 include부분을 찾아 주석처리를 없앱니다.  html 언어의 주석처리는 <!--       ~~~         -- > 입니다.  
+먼저 home/catkin_ws/src/indy_ros/indy10_gazebo/launch에 있는 [indy10_moveit_gazebo.launch](./software/src/indy-ros/indy10_gazebo/launch/indy10_moveit_gazebo.launch) 에서 include부분을 찾아 주석처리를 없앱니다.  html 언어의 주석처리는 <!--       ~~~         -- > 입니다.  
 
 <img src="./image/28.jpg" width="40%" height="40%" /><img src="./image/29.jpg" width="40%" height="40%" />
 
