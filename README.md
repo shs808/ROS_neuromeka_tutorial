@@ -188,11 +188,12 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
     [Download files in src  ](./software/src)
 
-    - indy-ros는 INDY-10 관련 ros 소스파일들 입니다. 
-    - pointgrey_cameara_driver는 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다. 
-    - trac-ik는 로봇의 역기구학을 계산해주는 플러그-인인데,  기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다. 
+   * indy-ros.zip: indy-ros는 INDY-10 관련 ros 소스파일들 입니다. 
+   * pointgrey_camera_driver.zip: 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다. 
+   * track-ik.zip: 로봇의 역기구학을 계산해주는 플러그-인인데,  기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다. 
 
-2. 다운로드 받은 파일을 Home의 catkin_ws의 src에 넣습니다. camera 및 trak-ik 압축파일들 또한 각각의 파일 위치에 압축해제합니다.
+2. 다운로드 받은 파일을 압축 해제 후 Home의 catkin_ws의 src 폴더에 넣습니다. camera 및 trak-ik 압축파일들 또한 각각의 파일 위치에 압축해제합니다.
+
 
 3. 이제 터미널 (cmd) 창을 열어 앞서 사용해본 catkin_make 명령어로 파일들을 빌드 합니다. 
 
