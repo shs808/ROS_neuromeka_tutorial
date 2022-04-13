@@ -108,8 +108,9 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
    
 
-2. **ROS 설치 코드**입니다. 터미널(cmd)에 아래와 같이 입력하시면 됩니다 .
-> 본 튜토리얼에서는 ROS1 melodic 버전을 사용합니다.
+2. **ROS 설치 코드**입니다. 터미널(cmd)에 아래와 같이 입력하시면 됩니다.
+   
+   본 튜토리얼에서는 ROS1 melodic 버전을 사용합니다.
 
    `sudo apt-get install ros-melodic-desktop-full`
 
