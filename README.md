@@ -1,3 +1,8 @@
+# ubuntu installation
+
+https://yerinpy73.tistory.com/5
+
+
 # Manipulator (INDY-10) Simulation Environment
 
 ## Introduction
