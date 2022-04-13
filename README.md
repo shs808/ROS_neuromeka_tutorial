@@ -212,11 +212,11 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 4. (초기 설정시 1회 수행) ROS 환경구성한 것처럼 터미널에서 실행할 때 마다 자동적으로 catkin_ws에 빌드된 파일들이 불러와지도록 해주는 명령어입니다.
    이 명령어 또한 한번만 해주면 .bashrc 파일을 삭제 하지 않는 이상 계속 저장되어 있습니다. 
 
-  `echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc`
+   `echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc`
   
-  `source ~/.bashrc`
+   `source ~/.bashrc`
   
-  `sudo chown -R $USER ~/.ros`
+   `sudo chown -R $USER ~/.ros`
 
 
 5. 빌드가 무사히 완료되었다면 아래의 코드들로 테스트 해봅니다
