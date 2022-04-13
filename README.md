@@ -207,13 +207,15 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
    만들어진 공간을 cd 명령어를 통해 간 후, catkin_make 명령어를 통해 src에 있는 모든 파일에 대한 빌드파일을 만듭니다. 
 
- > src 내부의 로봇에 관련된 <span style="color:red">**C++코드**들은 바꿀 때마다 **catkin_make로 빌드**해줘야지 바뀐 내용들이 저장됩니다.
+ src 내부의 로봇에 관련된 <span style="color:red">**C++코드**들은 바꿀 때마다 **catkin_make로 빌드**해줘야지 바뀐 내용들이 저장됩니다.
 
 4. (초기 설정시 1회 수행) ROS 환경구성한 것처럼 터미널에서 실행할 때 마다 자동적으로 catkin_ws에 빌드된 파일들이 불러와지도록 해주는 명령어입니다.
    이 명령어 또한 한번만 해주면 .bashrc 파일을 삭제 하지 않는 이상 계속 저장되어 있습니다. 
 
   `echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc`
+  
   `source ~/.bashrc`
+  
   `sudo chown -R $USER ~/.ros`
 
 
