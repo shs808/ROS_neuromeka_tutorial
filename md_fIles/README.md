@@ -50,14 +50,14 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다. Linux의 기본 �
 
 * ### Tutorial Indy Hardware (Setting & Demo)
 
-  * [Reference Link](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/md_fIles/Tutorial%20-%20Manipulator%20INDY-10.md )
+  * [Reference Link](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/md_fIles/Tutorial%20-%20Manipulator%20INDY-10.md)
 
 
     
 
 * ### Tutorial ROS Camera (Setting)
 
-  * [Reference Link](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/md_fIles/Tutorial%20-%20Camera.md )
+  * [Reference Link](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/md_fIles/Tutorial%20-%20Camera.md)
 
 
     
