@@ -188,11 +188,11 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
     [Download files in src  ](./software/src)
 
    * indy-ros.zip: 
-   ** Neuromeka INDY-10 관련 ros 소스파일들 입니다. 
+    * Neuromeka INDY-10 관련 ros 소스파일들 입니다. 
    * pointgrey_camera_driver.zip
-   ** 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다. 
+    * 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다. 
    * track-ik.zip: 
-   ** 로봇의 역기구학을 계산해주는 플러그-인인데,  기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다. 
+    * 로봇의 역기구학을 계산해주는 플러그-인인데,  기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다. 
 
 2. 다운로드 받은 파일을 압축 해제 후 Home의 catkin_ws의 src 폴더에 넣습니다. 폴더명을 아래 그림과 같이 지정한 후 압축해제 파일들을 넣습니다.
 
@@ -212,11 +212,9 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 4. (초기 설정시 1회 수행) ROS 환경구성한 것처럼 터미널에서 실행할 때 마다 자동적으로 catkin_ws에 빌드된 파일들이 불러와지도록 해주는 명령어입니다.
    이 명령어 또한 한번만 해주면 .bashrc 파일을 삭제 하지 않는 이상 계속 저장되어 있습니다. 
 
-   ```
-  echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+  ```echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
   source ~/.bashrc
-  sudo chown -R $USER ~/.ros
-  ```
+  sudo chown -R $USER ~/.ros```
 
 
 5. 빌드가 무사히 완료되었다면 아래의 코드들로 테스트 해봅니다
