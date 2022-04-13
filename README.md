@@ -95,21 +95,29 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
 1. **Linux에서 ctrl+alt+t 로 터미널(cmd)창**을 열고 아래의 코드를 순서대로 입력합니다. **ROS key 설정**하는 코드입니다. 
 
+* ROS 홈페이지에 접속하여 ROS key관련 최신 리스트를 받아오는 코드입니다.
+
    `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
 
    `sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654 `
+
+
+* 최신 정보 업데이트를 진행합니다.
 
    `sudo apt-get update`
 
    
 
 2. **ROS 설치 코드**입니다. 터미널(cmd)에 아래와 같이 입력하시면 됩니다 .
+> 본 튜토리얼에서는 ROS1 melodic 버전을 사용합니다.
 
    `sudo apt-get install ros-melodic-desktop-full`
 
    <span style="color:red">주의 : WIFI나 인터넷 연결 상태가 안좋거나, 랜선 자체에 Block 기능이 활성화 되어 있을 경우 완전히 다운로드 되지 않습니다.</span>
 
 3. ROS 초기화 명령어 입니다.  **처음 설치시**에만 사용됩니다.
+
+* ROS 의존성 파일 설치 코드입니다.
 
    `sudo apt-get install python-rosdep`
 
@@ -151,8 +159,8 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
 7. **ROS 파일 공간 (workspace)** 만들기 
 
-   앞으로 사용하면서 추가 또는 설치할 로봇 기본 소스 코드를 저장할 공간을 만듭니다. 
-
+   앞으로 사용하면서 추가 또는 설치할 로봇 기본 소스 코드를 저장할 공간(workspace)을 만듭니다. 
+* 작업 디렉토리 생성
    `mkdir -p ~/catkin_ws/src`
 
    만들어진 공간을 cd 명령어를 통해 간 후, catkin_make 명령어를 통해 src에 있는 모든 파일에 대한 빌드파일을 만듭니다. 
