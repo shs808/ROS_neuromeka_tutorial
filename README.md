@@ -545,7 +545,7 @@ indy6d_driver.cpp은 **ROS에서 연결된 로봇의 컨트롤 박스로 명령�
 
 Gazebo 테스트로 **좌표 조정 및 코드 수정이 완료**되면 실제 로봇에 적용해봅니다. 
 
-Gazebo에서 했던 것 같이 [indy_interface.launch](./software/src/indy-ros/indy_driver/launch/indy_interface.launch) 에서 44번째에서 47번째 까지의 주석처리를 없앱니다. 
+Gazebo에서 했던 것 같이 home/catkin_ws/src/indy_ros/indy_driver/launch의 [indy_interface.launch](./software/src/indy-ros/indy_driver/launch/indy_interface.launch) 에서 44번째에서 47번째 까지의 주석처리를 없앱니다. 
 
 카메라를 연결한 후, Gazebo test에서 한 것 처럼 
 
