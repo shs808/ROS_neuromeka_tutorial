@@ -192,7 +192,9 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
    * pointgrey_camera_driver.zip: 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다. 
    * track-ik.zip: 로봇의 역기구학을 계산해주는 플러그-인인데,  기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다. 
 
-2. 다운로드 받은 파일을 압축 해제 후 Home의 catkin_ws의 src 폴더에 넣습니다. camera 및 trak-ik 압축파일들 또한 각각의 파일 위치에 압축해제합니다.
+2. 다운로드 받은 파일을 압축 해제 후 Home의 catkin_ws의 src 폴더에 넣습니다. 폴더명을 아래 그림과 같이 지정하여 압축해제 파일들을 
+
+![스크린샷, 2022-04-13 12-05-58](https://user-images.githubusercontent.com/79825525/163092084-657b5fcd-6452-4983-9330-721b6be992b0.png)
 
 
 3. 이제 터미널 (cmd) 창을 열어 앞서 사용해본 catkin_make 명령어로 파일들을 빌드 합니다. 
@@ -201,7 +203,20 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
    `catkin_make`
 
-4. 빌드가 무사히 완료되었다면 아래의 코드들로 테스트 해봅니다
+   만들어진 공간을 cd 명령어를 통해 간 후, catkin_make 명령어를 통해 src에 있는 모든 파일에 대한 빌드파일을 만듭니다. 
+
+ src 내부의 로봇에 관련된 <span style="color:red">**C++코드**들은 바꿀 때마다 **catkin_make로 빌드**해줘야지 바뀐 내용들이 저장됩니다.
+
+4. (초기 설정 1회 수행) ROS 환경구성한 것처럼 터미널에서 실행할 때 마다 자동적으로 catkin_ws에 빌드된 파일들이 불러와지도록 해주는 명령어입니다.
+   이 명령어 또한 한번만 해주면 .bashrc 파일을 삭제 하지 않는 이상 계속 저장되어 있습니다. 
+
+   `echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc`
+
+   `source ~/.bashrc`
+
+   `sudo chown -R $USER ~/.ros`
+
+5. 빌드가 무사히 완료되었다면 아래의 코드들로 테스트 해봅니다
 
     - Indy10 Rviz 데모 실행
 
@@ -235,7 +250,7 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
     ​		
 
-5. 종료하시고 싶으시다면 명령을 실행한 터미널로 가서 `ctrl+c` 를 누르면 `roslaunch`나 `rosrun`한 파일들이 종료됩니다.
+6. 종료하시고 싶으시다면 명령을 실행한 터미널로 가서 `ctrl+c` 를 누르면 `roslaunch`나 `rosrun`한 파일들이 종료됩니다.
 
 
 
