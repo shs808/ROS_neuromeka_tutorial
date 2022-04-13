@@ -218,14 +218,14 @@ ROS는 Linux에서 **Python 2 버전**으로 작동됩니다.  Linux의 기본 �
 
 5. 빌드가 무사히 완료되었다면 아래의 코드들로 테스트 해봅니다
 
-    - Indy10 Rviz 데모 실행
+    * Indy10 Rviz 데모 실행
 
       `roslaunch indy10_moveit_config demo.launch`
 
     <img src="./image/20.jpg" width="40%" height="40%" />
-
-    - Indy10 Gazebo 실행
-
+    
+    * Indy10 Gazebo 실행
+    - 별도의 cmd창을 실행 후 아래의 명령어 입력
       `roslaunch indy10_gazebo indy10_moveit_gazebo.launch`
 
     <img src="./image/21.jpg" width="70%" height="70%" />
