@@ -70,12 +70,9 @@
 
    [Download files in src](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/software/src)
 
-   - indy-ros.zip:
-   - Neuromeka INDY-10 관련 ros 소스파일들 입니다.
-   - pointgrey_camera_driver.zip
-   - 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다.
-   - track-ik.zip:
-   - 로봇의 역기구학을 계산해주는 플러그-인인데, 기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다.
+   - indy-ros.zip: Neuromeka INDY-10 관련 ros 소스파일들 입니다.
+   - pointgrey_camera_driver.zip : 이번 프로젝트에서 사용된 카메라의 ros 소스파일입니다.
+   - track-ik.zip: 로봇의 역기구학을 계산해주는 플러그-인인데, 기존의 Rviz의 Move-it이 사용하는 플러그인보다 더 빠르고 정확합니다.
 
 2. 다운로드 받은 파일을 압축 해제 후 Home의 catkin_ws의 src 폴더에 넣습니다. 폴더명을 아래 그림과 같이 지정한 후 압축해제 파일들을 넣습니다.
 
