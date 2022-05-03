@@ -16,7 +16,7 @@
     
     로봇뿐만 아니라, 사용한 **그리퍼 EGP-64** 및 **Point Grey 카메라**에 대한 연결 및 사용법 또한 Repository에 포함되어 있습니다.
     
-    **이 프로젝트는 한동대학교 김 영 근 교수님의 지도아래 진행되었습니다.**
+    **이 프로젝트는 한동대학교 김영근 교수님의 지도아래 진행되었습니다.**
     
     
     
@@ -38,7 +38,7 @@
     
     * ### Tutorial Ubuntu install
     
-      * [Reference Link](https://www.notion.so/Ubuntu-ROS-2d6bfba1a34d484a9c159a8df5d133b1)
+      * [Reference Link](https://ykkim.gitbook.io/dlip/installation-guide/ubuntu/ubuntu-18.04-installation)
     
        
     
