@@ -12,15 +12,15 @@
 
 하드웨어 세팅에서 가장 중요한 부분은 물체가 놓이는 **평면의 높이**, 로봇이 **물체를 잡을 위치에 대한 카메라의 픽셀당 좌표 값계산**, 그리고 가장 중요한 **로봇의 영점좌표와 카메라의 영점좌표 조정**입니다. 아래의 예시 이미지들은 이번 프로젝트에서 사용한 세팅 구도입니다.
 
-[![img](https://github.com/chaochao77/ROS_neuromeka_tutorial/raw/main/image/35.jpg)](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/image/35.jpg)
+![image](https://user-images.githubusercontent.com/79825525/168934568-da39e71e-b76f-4074-b88b-f0b931bfa122.png)
 
-예를 들어 위의 이미지 처럼 로봇의 영점좌표(**엔드툴 좌표가 아닌 로봇의 0번 조인트의 중심 좌표**)에서 카메라의 ROI영역의 영점좌표가 다를 경우, **서로의 X축 사이거리 Dy와 y축 사이거리 Dx를 이동 좌표에 더하거나 빼주고, 축 방향이 서로 반대 일 경우에는 좌표를 반전시키는 등, 로봇의 영점좌표 기준으로 좌표 계산**을 해야합니다. **ROS의 길이 표준 값은 미터(m) 기준 입니다. 예를 들어 Dx가 10cm미터라하면 0.1만큼을 계산식에 넣어야 합니다.**
+예를 들어 위의 이미지 처럼 로봇의 영점좌표(**엔드툴 좌표가 아닌 로봇의 0번 조인트의 중심 좌표**)에서 카메라의 ROI영역의 영점좌표가 다를 경우, **카메라 좌표 중심과 indy10 X축 영점 사이거리 Dx와 y축 사이거리 Dy를 이동 좌표에 더하거나 빼주고, 축 방향이 서로 반대 일 경우에는 좌표를 반전시키는 등, 로봇의 영점좌표 기준으로 좌표 계산**을 해야합니다. **ROS의 길이 표준 값은 미터(m) 기준 입니다. 예를 들어 Dx가 10cm미터라하면 0.1만큼을 계산식에 넣어야 합니다.**
 
 예를 들어 이번 프로젝트에서 사용한 [video.cpp](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/software/src/indy-ros/indy_driver/src/video.cpp) 에서 178번째와 179번째 줄을 보면 아래와 같이 물체 좌표 계산하였습니다.
 
 ```
-        robot_X = -(camera_X-Dx);   // x축 방향이 반대
-        robot_Y = (camera_Y+Dy);   
+        robot_X = -(camera_X - ROI_center_X - Dx);   // x축 방향이 반대
+        robot_Y = (camera_Y + Dy);   
 ```
 
 [![img](https://github.com/chaochao77/ROS_neuromeka_tutorial/raw/main/image/36.jpg)](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/image/36.jpg)
@@ -30,10 +30,10 @@
 이 프로젝트에서는 한 평면만을 사용했기에 로봇의 이동 높이는 고정이 되어있습니다. 그렇기에 실제 로봇에 물체 및 목표 좌표를 보내는 코드에서 z값이 고정적으로 들어가게 됩니다. [camera_process.cpp](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/software/src/indy-ros/indy_driver/src/camera_process.cpp)에서 52번째 줄이 고정된 계산 값인데 계산 식은 아래식을 따릅니다.
 
 ```
-obz = H - G.H
+obz = H + G.H
 ```
 
-**H**는 물체가 놓이는 **평면(테이블)과 로봇의 영점좌표의 차이**, 그리고 **G.H는 그리퍼의 높이**입니다. 그리퍼의 높이를 빼는 이유는 Moveit의 경우 로봇이 좌표로 **이동 할 떄 기준은 로봇의 영점좌표**이고 **이동 객체의 중심은 로봇의 끝(엔드툴)**이기 때문입니다.
+**H**는 물체가 놓이는 **평면(테이블)과 로봇의 영점좌표의 차이**, 그리고 **G.H는 그리퍼의 높이**입니다. 그리퍼의 높이를 더하는 이유는 Moveit의 경우 로봇이 좌표로 **이동 할 떄 기준은 로봇의 영점좌표**이고 **이동 객체의 중심은 로봇의 끝(엔드툴)**이기 때문입니다.
 
 [camera_process.cpp](https://github.com/chaochao77/ROS_neuromeka_tutorial/blob/main/software/src/indy-ros/indy_driver/src/camera_process.cpp)에서 60번째 줄의 trz 값은 물체의 이동 목표 좌표의 높이 값입니다. 타겟 좌표 또한 위와 같이 잘 계산 하여 값을 넣으면 됩니다.
 
