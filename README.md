@@ -4,7 +4,7 @@
     
     ## Introduction
     
-    이 Repository는 한동대학교 2021년 2학기에 진행된 기전융합프로젝트, **스마트 팩토리의 분류 자동화를 위한 산업로봇 시뮬레이터 환경 구축** (Developing Simulation Environment of Industrial robot (Indy) for Defect Inspection) 에 대한 **설치 파일 및 튜토리얼**이 포함되어 있습니다.
+    이 Repository는 **스마트 팩토리의 분류 자동화를 위한 산업로봇 시뮬레이터 환경 구축** (Developing Simulation Environment of Industrial robot (Indy) for Defect Inspection) 에 대한 **설치 파일 및 튜토리얼**이 포함되어 있습니다.
     
     스마트팩토리의 한 공정에 대한 **산업로봇의 제어 코드를 작성**하고, 작성된 코드를 **Gazebo에서 안정성 테스트**를 거친 후 실제 로봇에 적용하는 **시뮬레이션 환경을 구축**하는 것이 목적이었습니다. **시뮬레이션 테스트 및 실제 구현해본 공정은 자동 분류 공정**입니다.
     
